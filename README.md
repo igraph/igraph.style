@@ -27,5 +27,5 @@ Compare:
 styler::style_text("A+-+B")
 #> A + -+B
 styler::style_text("A+-+B", style = igraph.style::igraph_style)
-#> A +-+B
+#> A +-+ B
 ```
