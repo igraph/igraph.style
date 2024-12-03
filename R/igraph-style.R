@@ -1,3 +1,9 @@
+#' The igraph style guide
+#'
+#' @export
+#'
+#' @examples
+#' styler::style_text("A+-+B", style = igraph.style::igraph_style)
 igraph_style <- function(scope = "tokens", ...) {
   style <- styler::tidyverse_style(scope = scope, ...)
 
