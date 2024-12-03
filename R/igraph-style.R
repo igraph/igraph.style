@@ -25,18 +25,18 @@ normalize_igraph_arrows <- function(pd) {
   }
 
   if (pd$token[[1]] %in% c("'-'", "'+'")) {
-    if (pd$child[[2]]$token[[1]] %in% c("'-'", "'+'")) {
-      if (!(pd$child[[2]]$child[[2]]$token[[1]] %in% c("'-'", "'+'"))) {
-        #pd$child[[2]]$spaces[[1]] <- 1L
+    if (pd$token_before[[1]] %in% c("'-'", "'+'")) {
+      if (!(pd$token_after[[1]] %in% c("'-'", "'+'"))) {
+        pd$spaces[[1]] <- 1L
       }
     }
   }
-  if (nrow(pd) >= 2 && pd$token[[2]] %in% c("'-'", "'+'")) {
-    if (pd$child[[3]]$token[[1]] %in% c("'-'", "'+'")) {
-      if (!(pd$child[[3]]$child[[2]]$token[[1]] %in% c("'-'", "'+'"))) {
-        #pd$child[[3]]$spaces[[1]] <- 1L
-      }
-      pd$spaces[[2]] <- 0L
+
+  if (nrow(pd) > 1) {
+    evens <- seq.int(2L, nrow(pd), by = 2L)
+    if (all(pd$token[evens] %in% c("'-'", "'+'"))) {
+      after_ops <- pd$token_after[evens] %in% c("'-'", "'+'")
+      pd$spaces[evens][after_ops] <- 0L
     }
   }
   pd

@@ -17,68 +17,68 @@
     Code
       styler::style_text("A+-+B", style = igraph_style)
     Output
-      A +-+B
+      A +-+ B
 
 ---
 
     Code
       styler::style_text("A+--+B", style = igraph_style)
     Output
-      A +--+B
+      A +--+ B
 
 ---
 
     Code
       styler::style_text("A+---+B", style = igraph_style)
     Output
-      A +---+B
+      A +---+ B
 
 ---
 
     Code
       styler::style_text("A+-B", style = igraph_style)
     Output
-      A +-B
+      A +- B
 
 ---
 
     Code
       styler::style_text("A+--B", style = igraph_style)
     Output
-      A +--B
+      A +-- B
 
 ---
 
     Code
       styler::style_text("A+---B", style = igraph_style)
     Output
-      A +---B
+      A +--- B
 
 ---
 
     Code
       styler::style_text("A-+B", style = igraph_style)
     Output
-      A -+B
+      A -+ B
 
 ---
 
     Code
       styler::style_text("A--+B", style = igraph_style)
     Output
-      A --+B
+      A --+ B
 
 ---
 
     Code
       styler::style_text("A---+B", style = igraph_style)
     Output
-      A ---+B
+      A ---+ B
 
 ---
 
     Code
       styler::style_text("A----+B", style = igraph_style)
     Output
-      A ----+B
+      A ----+ B
 
