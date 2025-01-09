@@ -10,7 +10,7 @@
     Code
       styler::style_text("A - +B:C", style = igraph_style)
     Output
-      A - +B:C
+      A -+ B:C
 
 ---
 
